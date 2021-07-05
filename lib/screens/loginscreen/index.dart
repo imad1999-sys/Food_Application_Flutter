@@ -31,21 +31,28 @@ class LoginScreen extends StatelessWidget {
             Column(
               children: [
                 LoginTextField(
-                    hintTextname: "username",
-                    textFieldIcon: Icons.supervised_user_circle,
-                    textFieldIconColor: Colors.white),
+                  hintTextname: "username",
+                  textFieldIcon: Icons.supervised_user_circle,
+                  textFieldIconColor: Colors.white,
+                  obscureText: false,
+                  textInputType: TextInputType.text,
+                ),
                 SizedBox(
                   height: 30,
                 ),
                 LoginTextField(
-                    hintTextname: "password",
-                    textFieldIcon: Icons.lock,
-                    textFieldIconColor: Colors.white),
+                  hintTextname: "password",
+                  textFieldIcon: Icons.lock,
+                  textFieldIconColor: Colors.white,
+                  obscureText: true,
+                  textInputType: TextInputType.visiblePassword,
+                ),
                 LoginButton(
-                    btnText: "log in",
-                    btnTextColor: Colors.white,
-                    btnColor: Colors.red,
-                    btnTextSize: 20),
+                  btnText: "log in",
+                  btnTextColor: Colors.white,
+                  btnColor: Colors.red,
+                  btnTextSize: 20,
+                ),
                 RegistrationLink(
                     firstText: "Do you not have an account",
                     firstTextColor: Colors.white,

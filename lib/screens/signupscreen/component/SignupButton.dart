@@ -5,12 +5,13 @@ class SignupButton extends StatelessWidget {
   final Color btnTextColor;
   final Color btnColor;
   final double btnTextSize;
-
+  final Function onTap;
   SignupButton({
     @required this.btnText,
     @required this.btnTextColor,
     @required this.btnColor,
     @required this.btnTextSize,
+    @required this.onTap
   });
 
   @override
@@ -19,7 +20,7 @@ class SignupButton extends StatelessWidget {
       width: 200,
       padding: EdgeInsets.all(20),
       child: RaisedButton(
-        onPressed: () {},
+        onPressed: onTap,
         color: btnColor,
         child: Text(
           btnText,
